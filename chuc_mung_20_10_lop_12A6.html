@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc mừng 20-10 lớp 12A6 🎉</title>
+<style>
+  body {
+    background-color: #ffe6f2;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  h1 {
+    color: #ff4da6;
+    margin-top: 50px;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff99cc; }
+    to { text-shadow: 0 0 20px #ff3399; }
+  }
+  .letter {
+    background: white;
+    border: 2px solid #ff99cc;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 0 15px #ffb3d9;
+  }
+  .floating {
+    position: absolute;
+    animation: float 8s infinite ease-in-out;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<h1>💐 Chúc Mừng Ngày 20-10 Lớp 12A6 💐</h1>
+
+<div class="letter">
+  <p>💌 Chúc các bạn nữ lớp <strong>12A6</strong> luôn vui vẻ, xinh đẹp và mạnh khỏe.</p>
+  <p>🌸 Đặc biệt là trong những năm tháng cuối cấp này, hãy giúp đỡ nhau nhiều hơn và đoàn kết để cùng bước tiếp chặng đường phía trước nhé 💖</p>
+</div>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9f94cc3ff8.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const stickers = ['💖','🌸','🐻','🐱','🐶','💐','🎀','💕'];
+for (let i = 0; i < 25; i++) {
+  const span = document.createElement('span');
+  span.textContent = stickers[Math.floor(Math.random() * stickers.length)];
+  span.className = 'floating';
+  span.style.left = Math.random() * 100 + 'vw';
+  span.style.fontSize = (Math.random() * 24 + 16) + 'px';
+  span.style.animationDuration = (Math.random() * 5 + 5) + 's';
+  document.body.appendChild(span);
+}
+</script>
+
+</body>
+</html>
